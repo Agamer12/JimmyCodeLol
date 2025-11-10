@@ -20,7 +20,7 @@ def main():
       break
 
     while True:
-      cpuInput = random(1,9)
+      cpuInput = random(1, 9)
 
       if boardState[cpuInput] == 0:
         updateState(boardState, cpuInput, 2)
@@ -34,3 +34,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    
