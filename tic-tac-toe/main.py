@@ -9,7 +9,7 @@ def main():
       playerInput = input("Your Move: (1-9)")
 
       if boardState[playerInput] == 0:
-        updateState(boardState, playerInput, 1)
+        boardState[playerInput] = 1;
         break
       else:
         print("Invalid Move!")
@@ -23,7 +23,7 @@ def main():
       cpuInput = random(1, 9)
 
       if boardState[cpuInput] == 0:
-        updateState(boardState, cpuInput, 2)
+        boardState[cpuInput] = 2
         break
 
     printBoard(boardState)
@@ -35,4 +35,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-    
