@@ -1,16 +1,16 @@
 CC = clang
 CFLAGS = -Wall -Wpedantic -Werror -Wextra
 
-all: main
+all: chess
 
-main: main.o
-	$(CC) main.o -o main
+chess: chess.o
+	$(CC) chess.o -o chess
 
-main.o: main.cpp
-	$(CC) $(CFLAGS) -c main.cpp config.h
+chess.o: chess.cpp
+	$(CC) $(CFLAGS) -c chess.cpp config.h
 
 clean:
-	rm -f main *.o
+	rm -f chess *.o
 
 format:
 	clang-format -i -style=file *.[ch]
