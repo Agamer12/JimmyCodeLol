@@ -7,7 +7,7 @@ main: main.o
 	$(CC) main.o -o main
 
 main.o: main.cpp
-	$(CC) $(CFLAGS) -c main.cpp
+	$(CC) $(CFLAGS) -c main.cpp config.h
 
 clean:
 	rm -f main *.o
